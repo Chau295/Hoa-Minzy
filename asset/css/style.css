@@ -1,0 +1,726 @@
+/* Reset CSS & Common Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.white {
+    color: white !important;
+}
+
+/* ==================== HEADER ==================== */
+/* Header Container */
+#header {
+    height: 60px;
+    background-color: #831843; /* Pink-900 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+}
+
+#nav > li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+#nav li a {  
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 16px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Subnav */
+#nav .subnav {
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#nav .subnav a {
+    color: #831843;
+    padding: 0 16px;
+    line-height: 40px;
+    font-size: 0.9rem;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li:hover a {
+    background-color: #fbcfe8; /* Pink-200 */
+    color: #831843;
+}
+
+#nav > li:hover > a {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Search Button */
+#header .mobile-menu-btn,
+#header .search-btn {
+    color: #fff;
+    line-height: 60px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+#header .search-btn:hover {
+    background-color: #be185d; /* Pink-700 */
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#header .mobile-menu-btn {
+    display: none;
+}
+
+/* ==================== CONTENT ==================== */
+/* Slider */
+#slider {
+    position: relative;
+    margin-top: 60px;
+    padding-top: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/slider_1.jpg') top center / cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    color: white;
+    bottom: 20%;
+    text-align: center;
+    right: 0;
+    left: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#slider .title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slider .sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+#slider .cta-button {
+    background-color: #db2777; /* Pink-600 */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#slider .cta-button:hover {
+    background-color: #be185d; /* Pink-700 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Content Section */
+#content .content-section {
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #831843; /* Pink-900 */
+    margin-bottom: 8px;
+}
+
+#content .section-sub-heading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+    color: #be185d; /* Pink-700 */
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Music Section */
+.music-section {
+    background-color: #fdf2f8; /* Pink-50 */
+    padding: 0;
+}
+
+.video-container {
+    margin: 0 auto 40px;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    border: none;
+}
+
+.album-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.album-item {
+    width: calc(33.33% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.album-image {
+    overflow: hidden;
+}
+
+.album-image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.album-item:hover .album-image img {
+    transform: scale(1.05);
+}
+
+.album-info {
+    padding: 20px;
+}
+
+.album-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #831843; /* Pink-900 */
+}
+
+.album-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Tour Section */
+.tour-section {
+    background: linear-gradient(135deg, #831843, #6b21a8); /* Pink-900 to Purple-800 */
+    color: #fff;
+}
+
+.tour-section .ticket-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 600px;
+}
+
+.tour-section .ticket-list li {
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 8px;
+}
+
+.ticket-list .sold-out {
+    color: #fda4af; /* Pink-300 */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.ticket-list .number {
+    background-color: #22c55e; /* Green-500 */
+    color: white;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.places-tickets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.places-tickets .item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.places-tickets .item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.places-tickets .img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.places-tickets .content-item {
+    padding: 20px;
+}
+
+.places-tickets .content-item .title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.places-tickets .content-item .date {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #fda4af; /* Pink-300 */
+}
+
+.places-tickets .content-item .info {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.places-tickets .content-item .button {
+    background-color: #db2777; /* Pink-600 */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.places-tickets .content-item .button:hover {
+    background-color: #be185d; /* Pink-700 */
+}
+
+/* ==================== FOOTER ==================== */
+#footer {
+    background-color: #fff;
+}
+
+#footer .content-footer {
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Info */
+.info-footer .info-item-footer {
+    text-align: left;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.content-footer .main-content-footer {
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.info-footer {
+    flex: 1;
+}
+
+/* Contact Form */
+.form-footer {
+    flex: 2;
+}
+
+.form-footer .form-row {
+    padding-bottom: 16px;
+}
+
+.form-footer .button {
+    background-color: #db2777; /* Pink-600 */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.form-footer .button:hover {
+    background-color: #be185d; /* Pink-700 */
+}
+
+.row-1 {
+    display: flex;
+    gap: 16px;
+}
+
+.row-1 input {
+    flex: 1;
+}
+
+.row-2 input {
+    width: 100%;
+}
+
+.form-row input {
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+.form-row input:focus {
+    outline: none;
+    border-color: #db2777; /* Pink-600 */
+    box-shadow: 0 0 0 2px rgba(219, 39, 119, 0.2);
+}
+
+.info-item-footer .fa-solid {
+    width: 20px;
+    margin-right: 16px;
+    color: #db2777; /* Pink-600 */
+    font-size: 1.2rem;
+}
+
+#footer .contact-footer {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #fdf2f8; /* Pink-50 */
+}
+
+.contact-footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.icon-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-footer a {
+    text-decoration: none;
+    color: #831843; /* Pink-900 */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.icon-footer a:hover {
+    color: #db2777; /* Pink-600 */
+}
+
+/* ==================== MODAL ==================== */
+/* Modal Container */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-main {
+    width: 90%;
+    max-width: 500px;
+    animation: modalFadeIn ease 0.5s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Modal Header */
+.modal-main .modal-header {
+    background-color: #db2777; /* Pink-600 */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 600;
+}
+
+.modal-header button {
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-header button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Content */
+.modal-main .moldal-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.moldal-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.moldal-container label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563; /* Gray-600 */
+}
+
+.moldal-container input {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    height: 44px;
+    padding: 0 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.moldal-container input:focus {
+    outline: none;
+    border-color: #db2777; /* Pink-600 */
+    box-shadow: 0 0 0 2px rgba(219, 39, 119, 0.2);
+}
+
+.moldal-container #pay {
+    height: 50px;
+    background-color: #db2777; /* Pink-600 */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.moldal-container #pay:hover {
+    background-color: #be185d; /* Pink-700 */
+}
+
+/* Modal Footer */
+.foot-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-form .need-help a {
+    color: #db2777; /* Pink-600 */
+    text-decoration: none;
+}
+
+.foot-form .need-help a:hover {
+    text-decoration: underline;
+}
+
+.foot-form button {
+    background-color: #f43f5e; /* Pink-500 */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.foot-form button:hover {
+    background-color: #e11d48; /* Pink-600 */
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

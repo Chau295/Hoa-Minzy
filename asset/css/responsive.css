@@ -1,0 +1,189 @@
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #content .content-section, 
+    #footer .content-footer {
+        padding: 60px 5%;
+    }
+    
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-top: 30px;
+        max-width: 500px;
+    }
+    
+    /* Album Gallery */
+    .album-item {
+        width: calc(50% - 15px);
+    }
+    
+    /* Tour Section */
+    .places-tickets .item {
+        width: calc(50% - 15px);
+    }
+    
+    /* Contact Form */
+    .content-footer .main-content-footer {
+        gap: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    /* Header */
+    #header {
+        overflow: visible;
+        position: relative;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    #nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #831843; /* Pink-900 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+    
+    #nav > li {
+        display: block;
+        width: 100%;
+    }
+    
+    #nav > li:first-child {
+        display: block;
+    }
+    
+    #nav .subnav {
+        position: static;
+        background: #9d174d; /* Pink-800 */
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+    
+    #nav .subnav a {
+        color: white;
+        padding: 5px 40px;
+    }
+    
+    .search-btn {
+        display: none;
+    }
+    
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Slider */
+    #slider .title {
+        font-size: 2.5rem;
+    }
+    
+    #slider .sub-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Content Sections */
+    #content .content-section, 
+    #footer .content-footer {
+        padding: 50px 20px;
+    }
+    
+    #content .section-heading {
+        font-size: 2rem;
+    }
+    
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    /* Album Gallery */
+    .album-gallery {
+        gap: 20px;
+    }
+    
+    .album-item {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    /* Tour Section */
+    .tour-section .ticket-list {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .tour-section .ticket-list li {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .places-tickets {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .places-tickets .item {
+        width: 100%;
+    }
+    
+    /* Contact Section */
+    .content-footer .main-content-footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .form-footer {
+        width: 100%;
+    }
+    
+    .row-1 {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    /* Modal */
+    .modal-main {
+        width: 95%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+    #slider .title {
+        font-size: 2rem;
+    }
+    
+    #slider .sub-title {
+        font-size: 1rem;
+    }
+    
+    #slider .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .icon-footer {
+        gap: 15px;
+    }
+    
+    .icon-footer a {
+        font-size: 1.2rem;
+    }
+}
